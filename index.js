@@ -24,6 +24,8 @@ var dust = require('dustjs-linkedin'),
 // Load helpers
 require('dustjs-helpers');
 
+if (global.template_engines!=null && global.template_engines.objects!=null)  global.template_engines.objects.dust = dust;
+
 
 module.exports = Object.create(dust, {
 
